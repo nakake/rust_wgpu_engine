@@ -1,0 +1,14 @@
+[package]
+name = "engine_renderer"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+engine_core = { path = "../engine_core" }
+engine_ecs = { path = "../engine_ecs" }
+
+wgpu = "25.0.2"
+winit = "0.30.3"
+pollster = "0.3.0"
+log = "0.4.22"
+bytemuck = { version = "1.16.1", features = ["derive"] }

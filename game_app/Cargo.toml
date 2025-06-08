@@ -1,0 +1,14 @@
+[package]
+name = "game_app"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+engine_core = { path = "../crates/engine_core" }
+engine_ecs = { path = "../crates/engine_ecs" }
+engine_renderer = { path = "../crates/engine_renderer" }
+
+winit = "0.30.3"
+env_logger = "0.11.3"
+pollster = "0.4.0"
+log = "0.4"
