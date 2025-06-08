@@ -5,4 +5,5 @@ edition = "2024"
 
 [dependencies]
 engine_core = { path = "../engine_core" }
-bevy_ecs = "0.14.0"
+
+bevy_ecs = { workspace = true }
