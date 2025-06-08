@@ -7,6 +7,8 @@ edition.workspace = true
 engine_core = { path = "../crates/engine_core" }
 engine_ecs = { path = "../crates/engine_ecs" }
 engine_renderer = { path = "../crates/engine_renderer" }
+engine_input = { path = "../crates/engine_input" }
+engine_time = { path = "../crates/engine_time" }
 
 winit = { workspace = true }
 env_logger = { workspace = true }

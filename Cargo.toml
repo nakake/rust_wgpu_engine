@@ -2,7 +2,9 @@
 members = [
     "crates/engine_core",
     "crates/engine_ecs",
+    "crates/engine_input",
     "crates/engine_renderer",
+    "crates/engine_time",
     "game_app",
 ]
 resolver = "2"
@@ -20,6 +22,7 @@ pollster = "0.4.0"
 log = "0.4.22"
 bytemuck = { version = "1.16.1", features = ["derive"] }
 env_logger = "0.11.3"
+chrono = "0.4"
 
 [workspace.package]
 version = "0.1.0"

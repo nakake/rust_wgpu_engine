@@ -5,5 +5,8 @@ edition.workspace = true
 
 [dependencies]
 engine_core = { path = "../engine_core" }
+engine_input = { path = "../engine_input" }
+engine_time = { path = "../engine_time" }
 
 bevy_ecs = { workspace = true }
+log = { workspace = true }

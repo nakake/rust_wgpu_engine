@@ -1,5 +1,5 @@
 use bevy_ecs::prelude::*;
-use engine_core::{math::Vec2, Color};
+use engine_core::{Color, math::Vec2};
 
 #[derive(Component, Debug)]
 pub struct Transform {
@@ -12,3 +12,9 @@ pub struct Transform {
 pub struct Renderable {
     pub color: Color,
 }
+
+#[derive(Component)]
+pub struct Player;
+
+#[derive(Component)]
+pub struct MoveSpeed(pub f32);

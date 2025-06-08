@@ -674,6 +674,16 @@ version = "0.1.0"
 dependencies = [
  "bevy_ecs",
  "engine_core",
+ "engine_input",
+ "engine_time",
+ "log",
+]
+
+[[package]]
+name = "engine_input"
+version = "0.1.0"
+dependencies = [
+ "bevy_ecs",
 ]
 
 [[package]]
@@ -687,6 +697,13 @@ dependencies = [
  "pollster",
  "wgpu",
  "winit",
+]
+
+[[package]]
+name = "engine_time"
+version = "0.1.0"
+dependencies = [
+ "bevy_ecs",
 ]
 
 [[package]]
@@ -814,7 +831,9 @@ version = "0.1.0"
 dependencies = [
  "engine_core",
  "engine_ecs",
+ "engine_input",
  "engine_renderer",
+ "engine_time",
  "env_logger",
  "log",
  "pollster",

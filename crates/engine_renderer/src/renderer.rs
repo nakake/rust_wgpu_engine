@@ -178,6 +178,8 @@ impl Renderer {
             })
             .collect::<Vec<_>>();
 
+        // log::info!("Rendering {} instances.", instance_data.len());
+
         self.queue.write_buffer(
             &self.instance_buffer,
             0,
