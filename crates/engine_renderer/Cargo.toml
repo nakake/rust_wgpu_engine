@@ -9,6 +9,6 @@ engine_ecs = { path = "../engine_ecs" }
 
 wgpu = "25.0.2"
 winit = "0.30.3"
-pollster = "0.3.0"
+pollster = "0.4.0"
 log = "0.4.22"
 bytemuck = { version = "1.16.1", features = ["derive"] }

@@ -1,5 +1,3 @@
-// crates/engine_renderer/src/renderer.rs
-
 use std::{iter, sync::Arc};
 use wgpu::util::DeviceExt;
 use winit::{event::WindowEvent, window::Window};
@@ -13,7 +11,6 @@ use engine_ecs::{
 use crate::instance::InstanceRaw;
 use crate::pipeline;
 
-// Rendererが外部に返すための公開エラー型
 #[derive(Debug)]
 pub enum RenderError {
     SurfaceLost,
@@ -49,16 +46,13 @@ impl Renderer {
             .unwrap();
 
         let (device, queue) = adapter
-            .request_device(
-                &wgpu::DeviceDescriptor {
-                    label: None,
-                    required_features: wgpu::Features::empty(),
-                    required_limits: wgpu::Limits::default(),
-                    memory_hints: wgpu::MemoryHints::Performance,
-                    trace: wgpu::Trace::default(), // 修正
-                },
-                //第2引数Noneを削除
-            )
+            .request_device(&wgpu::DeviceDescriptor {
+                label: None,
+                required_features: wgpu::Features::empty(),
+                required_limits: wgpu::Limits::default(),
+                memory_hints: wgpu::MemoryHints::Performance,
+                trace: wgpu::Trace::default(),
+            })
             .await
             .unwrap();
 
@@ -82,7 +76,6 @@ impl Renderer {
         };
         surface.configure(&device, &config);
 
-        //【修正】シェーダーパスはcrateのsrcルートからの相対パス
         let shader = device.create_shader_module(wgpu::include_wgsl!("shader.wgsl"));
 
         let render_pipeline_layout =
@@ -95,7 +88,6 @@ impl Renderer {
             config.format,
         );
 
-        // --- バッファ作成処理 (変更なし) ---
         const VERTICES: &[[f32; 3]] = &[
             [-0.5, -0.5, 0.0],
             [0.5, -0.5, 0.0],
@@ -136,7 +128,6 @@ impl Renderer {
         }
     }
 
-    // resize, input, render メソッド (変更なし)
     pub fn resize(&mut self, new_size: winit::dpi::PhysicalSize<u32>) {
         if new_size.width > 0 && new_size.height > 0 {
             self.size = new_size;

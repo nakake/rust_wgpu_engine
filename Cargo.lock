@@ -592,7 +592,7 @@ dependencies = [
  "engine_core",
  "engine_ecs",
  "log",
- "pollster 0.3.0",
+ "pollster",
  "wgpu",
  "winit",
 ]
@@ -731,7 +731,7 @@ dependencies = [
  "engine_renderer",
  "env_logger",
  "log",
- "pollster 0.4.0",
+ "pollster",
  "winit",
 ]
 
@@ -783,9 +783,9 @@ dependencies = [
 
 [[package]]
 name = "glam"
-version = "0.28.0"
+version = "0.30.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "779ae4bf7e8421cf91c0b3b64e7e8b40b862fba4d393f59150042de7c4965a94"
+checksum = "6b46b9ca4690308844c644e7c634d68792467260e051c8543e0c7871662b3ba7"
 
 [[package]]
 name = "glow"
@@ -1562,12 +1562,6 @@ dependencies = [
  "tracing",
  "windows-sys 0.59.0",
 ]
-
-[[package]]
-name = "pollster"
-version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "22686f4785f02a4fcc856d3b3bb19bf6c8160d103f7a99cc258bddd0251dc7f2"
 
 [[package]]
 name = "pollster"
