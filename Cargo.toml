@@ -1,10 +1,11 @@
 [workspace]
 members = [
-    "crates/engine_core",
-    "crates/engine_ecs",
-    "crates/engine_input",
-    "crates/engine_renderer",
-    "crates/engine_time",
+    "crates/engine",
+    "crates/engine_internals/core",
+    "crates/engine_internals/ecs",
+    "crates/engine_internals/input",
+    "crates/engine_internals/renderer",
+    "crates/engine_internals/time",
     "game_app",
 ]
 resolver = "2"
@@ -20,7 +21,7 @@ wgpu = "25.0.2"
 winit = "0.30.3"
 pollster = "0.4.0"
 log = "0.4.22"
-bytemuck = { version = "1.16.1", features = ["derive"] }
+bytemuck = { version = "1.23.1", features = ["derive"] }
 env_logger = "0.11.3"
 chrono = "0.4"
 

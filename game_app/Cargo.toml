@@ -4,11 +4,11 @@ version.workspace = true
 edition.workspace = true
 
 [dependencies]
-engine_core = { path = "../crates/engine_core" }
-engine_ecs = { path = "../crates/engine_ecs" }
-engine_renderer = { path = "../crates/engine_renderer" }
-engine_input = { path = "../crates/engine_input" }
-engine_time = { path = "../crates/engine_time" }
+engine_core = { path = "../crates/engine_internals/core" }
+engine_ecs = { path = "../crates/engine_internals/ecs" }
+engine_renderer = { path = "../crates/engine_internals/renderer" }
+engine_input = { path = "../crates/engine_internals/input" }
+engine_time = { path = "../crates/engine_internals/time" }
 
 winit = { workspace = true }
 env_logger = { workspace = true }
