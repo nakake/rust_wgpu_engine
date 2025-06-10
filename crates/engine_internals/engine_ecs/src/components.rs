@@ -1,5 +1,5 @@
 use bevy_ecs::prelude::*;
-use engine_core::{Color, math::Vec2};
+use engine_core::{math::Vec2, Color};
 
 #[derive(Component, Debug)]
 pub struct Transform {

@@ -1,3 +1,5 @@
+use engine_core::math;
+
 use bevy_ecs::prelude::*;
 use engine_time::Time;
 
@@ -14,7 +16,7 @@ pub fn player_movement_system(
         time.delta_seconds()
     );
     for (mut transform, speed) in query.iter_mut() {
-        let mut direction = engine_core::math::vec2(0.0, 0.0);
+        let mut direction = math::vec2(0.0, 0.0);
 
         if input.is_action_pressed(&InputAction::MoveForward) {
             direction.y += 1.0;

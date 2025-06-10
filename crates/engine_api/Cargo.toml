@@ -1,0 +1,13 @@
+[package]
+name = "engine_api"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[dependencies]
+engine_ecs = { path = "../engine_internals/engine_ecs" }
+engine_input = { path = "../engine_internals/engine_input" }
+engine_renderer = { path = "../engine_internals/engine_renderer" }
+engine_time = { path = "../engine_internals/engine_time" }
+
+log = { workspace = true }

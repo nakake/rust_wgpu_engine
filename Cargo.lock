@@ -661,10 +661,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d8b14ccef22fc6f5a8f4d7d768562a182c04ce9a3b3157b91390b52ddfdf1a76"
 
 [[package]]
-name = "engine"
+name = "engine_api"
 version = "0.1.0"
 dependencies = [
  "engine_ecs",
+ "engine_input",
+ "engine_renderer",
+ "engine_time",
+ "log",
 ]
 
 [[package]]
@@ -702,6 +706,7 @@ dependencies = [
  "engine_ecs",
  "log",
  "pollster",
+ "raw-window-handle",
  "wgpu",
  "winit",
 ]
@@ -836,6 +841,7 @@ dependencies = [
 name = "game_app"
 version = "0.1.0"
 dependencies = [
+ "engine_api",
  "engine_core",
  "engine_ecs",
  "engine_input",
@@ -844,6 +850,7 @@ dependencies = [
  "env_logger",
  "log",
  "pollster",
+ "wgpu",
  "winit",
 ]
 

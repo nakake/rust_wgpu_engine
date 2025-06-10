@@ -1,13 +1,5 @@
 [workspace]
-members = [
-    "crates/engine",
-    "crates/engine_internals/core",
-    "crates/engine_internals/ecs",
-    "crates/engine_internals/input",
-    "crates/engine_internals/renderer",
-    "crates/engine_internals/time",
-    "game_app",
-]
+members = ["crates/engine_api", "crates/engine_internals/*", "game_app"]
 resolver = "2"
 
 [profile.release]
@@ -21,9 +13,10 @@ wgpu = "25.0.2"
 winit = "0.30.3"
 pollster = "0.4.0"
 log = "0.4.22"
-bytemuck = { version = "1.23.1", features = ["derive"] }
+bytemuck = { version = "1.23.0", features = ["derive"] }
 env_logger = "0.11.3"
 chrono = "0.4"
+raw-window-handle = "0.6.2"
 
 [workspace.package]
 version = "0.1.0"
